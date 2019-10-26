@@ -2,7 +2,7 @@
   "name": "task-report",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://roipinheiro.github.io/task-report/",
+  "homepage": "https://roipinheiro.github.io/task-report",
   "scripts": {
     "start": "react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",

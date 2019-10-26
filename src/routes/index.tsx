@@ -6,7 +6,7 @@ const Home = lazy(() => import('../pages/Home'));
 
 export default function Routes() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Suspense fallback={<h1>Loading...</h1>}>
         <Switch>
           <Route exact path="/">
