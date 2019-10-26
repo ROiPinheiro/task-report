@@ -1,12 +1,12 @@
 version: 2
+environment:
+  - SOURCE_BRANCH: master
+  - TARGET_BRANCH: gh-pages
 jobs:
   build:
     docker:
       - image: circleci/node:8
     working_directory: ~/repo
-    environment:
-      - SOURCE_BRANCH: master
-      - TARGET_BRANCH: gh-pages
     steps:
       - checkout
       - restore_cache:
