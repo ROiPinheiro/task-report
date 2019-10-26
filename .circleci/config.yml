@@ -30,6 +30,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: test
+          command: ls -l
+      - run:
           name: Deploy
           command: |
             if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
