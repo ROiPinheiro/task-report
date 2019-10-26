@@ -21,20 +21,18 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
   test:
-    build:
-      docker:
-        - image: circleci/node:8
+    docker:
+      - image: circleci/node:8
     steps:
-      - test
+      - checkout
       - run:
         name: Run tests
         command: npm test
   deploy:
-    build:
-      docker:
-        - image: circleci/node:8
+    docker:
+      - image: circleci/node:8
     steps:
-      - deploy
+      - checkout
       - run:
         name: Deploy
         command: |
