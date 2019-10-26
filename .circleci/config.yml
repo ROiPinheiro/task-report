@@ -28,7 +28,7 @@ jobs:
       - checkout
       - run:
           name: Run tests
-          command: npm test
+          command: ls -l
   deploy:
     docker:
       - image: circleci/node:8
