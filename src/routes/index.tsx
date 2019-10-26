@@ -1,12 +1,12 @@
 import React, { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 const Login = lazy(() => import('../pages/Login'));
 const Home = lazy(() => import('../pages/Home'));
 
 export default function Routes() {
   return (
-    <Router basename={process.env.PUBLIC_URL + '/'}>
+    <Router basename={process.env.PUBLIC_URL}>
       <Suspense fallback={<h1>Loading...</h1>}>
         <Switch>
           <Route exact path="/">
