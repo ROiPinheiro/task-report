@@ -4,7 +4,7 @@ environment:
   - TARGET_BRANCH: gh-pages
 jobs:
   build:
-    working_directory: ~/repo
+    working_directory: ~/task-report
     docker:
       - image: circleci/node:8
     steps:
@@ -21,7 +21,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
   test:
-    working_directory: ~/repo
+    working_directory: ~/task-report
     docker:
       - image: circleci/node:8
     steps:
